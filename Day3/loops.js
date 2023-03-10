@@ -83,22 +83,26 @@ function drawTriangle(base, character){
     return drawing.join("\n");
 }
 
-drawTriangle(20,"*");
+console.log(drawTriangle(20,"*"));
 
+//otra forma sin usar 
+function drawTriangle2(base, character){
+    let triangle = "";
+    let characterNumber = 1;
+    while(characterNumber <= base){
+        for (let j = 0; j < base - characterNumber; j++) {
+            triangle += " ";
+        }
+        for (let j = 0; j < characterNumber; j++) {
+            triangle += character;
+        }
+        if (characterNumber < base) { 
+            triangle += `\n` 
+        };
+        characterNumber++;
+    }
+  
+  return triangle;
+}
 
-/**
- * 
- * DB: moodleibrgd
- * Db_user:ibrgd_user
- * Bd_Pass: eXvfEO[eA5D@z5LO
- * prefix: ibrgd_
- * 
- * Moodle
- * UserAdmin: ibrgd_admin
- * PassAdmin: Pur1t@no_2023
- * 350 x 160
- * 700 x 320
- * 
- * Jesus Christ being glorified by God the father while being crucified on the cross. --aspect 3:2 
- */
-
+console.log(drawTriangle2(30, "*"));
