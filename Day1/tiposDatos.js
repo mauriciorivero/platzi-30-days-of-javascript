@@ -55,3 +55,39 @@ let usuario = {
 }
 
 console.log(usuario[idUsuario]);
+
+/**
+ * Existe una manera de expresas cadenas de texto de una manera diferente y es con
+ * template literals. En la siguiente linea expresaré una cadena de texto
+ * como se usa normalmente
+ */
+
+var cadenaTexto = "Hola Mauricio Rivero, espero que te encuentres bien";
+
+//Si quiero que el "espero que te encuentres bien" esté en una linea debajo, debo usar
+//un retorno de carro y concatenar
+var cadenaTexto2="Hola Mauricio Rivero "+ "\n"+
+"Espero que te encuentres bien";
+
+/**
+ * Con template literals usando el back thick (`)
+ */
+
+var cadenaTexto3=`Hola Maurcio
+Espero que te encuentres bien`;
+
+/**
+ * Ahora, si quiero que "Mauricio" tome el valor de cualquier otra variable de texto
+ * esto se llama un placeholder y lo puedo especificar con ${valor}
+ */
+
+var nombre="Mauricio";
+var cadenaTexto4 = `Hola ${nombre}
+Espero que te encuentres bien`;
+
+console.log(cadenaTexto4);
+
+/**
+ * De esta manera podemos usar los template literals para formatear grandes cadenas de texto como para ser usados en 
+ * correos electrónicos o reportes.
+ */

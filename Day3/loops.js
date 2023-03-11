@@ -85,24 +85,23 @@ function drawTriangle(base, character){
 
 console.log(drawTriangle(20,"*"));
 
-//otra forma sin usar 
+//otra forma sin usar los metodos array con caracteres
 function drawTriangle2(base, character){
     let triangle = "";
-    let characterNumber = 1;
-    while(characterNumber <= base){
-        for (let j = 0; j < base - characterNumber; j++) {
-            triangle += " ";
+    let counter = 1;
+    while(counter<=base){
+        for(let i=0;i<base-counter;i++){
+            triangle+=" ";
         }
-        for (let j = 0; j < characterNumber; j++) {
-            triangle += character;
+        for(let j=0;j<counter;j++){
+            triangle+=character;
         }
-        if (characterNumber < base) { 
-            triangle += `\n` 
-        };
-        characterNumber++;
+        if(counter<base){
+            triangle+="\n";
+        }
+        counter++;
     }
-  
-  return triangle;
+    return triangle;
 }
 
 console.log(drawTriangle2(30, "*"));
